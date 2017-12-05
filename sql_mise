@@ -1,0 +1,10 @@
+ALTER TABLE `oc_users` ADD `nom_societe` VARCHAR(50) NOT NULL AFTER `photo_use`, 
+ADD `adresse` VARCHAR(50) NOT NULL AFTER `nom_societe`, 
+ADD `code_postal` VARCHAR(50) NOT NULL AFTER `adresse`,
+ADD `ville` VARCHAR(50) NOT NULL AFTER `code_postal`,
+ADD `pays` VARCHAR(50) NOT NULL AFTER `ville`;
+ALTER TABLE `oc_users` ADD `nom_banque` VARCHAR(50) NOT NULL AFTER `pays`,
+ ADD `iban` VARCHAR(50) NOT NULL AFTER `nom_banque`, 
+ ADD `swift` VARCHAR(50) NOT NULL AFTER `iban`;
+ ALTER TABLE `oc_users` ADD `siren` VARCHAR(50) NOT NULL AFTER `swift`;
+ ALTER TABLE `oc_users` ADD `n_tva` VARCHAR(50) NOT NULL AFTER `siren`;
